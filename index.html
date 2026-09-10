@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ko" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>김진호 - 퍼스널 브랜딩</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['-apple-system', 'BlinkMacSystemFont', '"Apple SD Gothic Neo"', '"Pretendard"', 'Roboto', '"Helvetica Neue"', 'Arial', 'sans-serif'],
+                    },
+                    colors: {
+                        applebg: '#f5f5f7',
+                        appledark: '#1d1d1f',
+                        appleblue: '#06c',
+                    }
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .glass {
+                @apply bg-white/70 backdrop-blur-md border-b border-gray-200/50;
+            }
+            .fade-in-section {
+                @apply opacity-0 translate-y-8 transition-all duration-1000 ease-out;
+            }
+            .fade-in-section.is-visible {
+                @apply opacity-100 translate-y-0;
+            }
+        }
+        body {
+            color: #1d1d1f;
+            background-color: #ffffff;
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-appleblue selection:text-white">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full top-0 z-50 glass">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 h-12 flex items-center justify-between text-xs font-semibold tracking-wide text-gray-800">
+            <a href="#" class="hover:text-black transition">김진호</a>
+            <div class="hidden sm:flex space-x-6">
+                <a href="#about" class="hover:text-black transition">소개</a>
+                <a href="#books" class="hover:text-black transition">출판</a>
+                <a href="#resume" class="hover:text-black transition">이력</a>
+                <a href="#papers" class="hover:text-black transition">논문</a>
+                <a href="#contact" class="hover:text-black transition">연락처</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="about" class="pt-32 pb-20 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto flex flex-col items-center text-center fade-in-section">
+        <img src="profile.png" alt="김진호" class="w-48 h-48 sm:w-56 sm:h-56 object-cover rounded-full shadow-2xl mb-8 border-4 border-white">
+        <h1 class="text-5xl sm:text-7xl font-bold tracking-tight mb-4">김진호</h1>
+        <p class="text-xl sm:text-2xl text-gray-500 font-medium max-w-2xl">
+            AI로 완성하는 퍼스널 브랜딩과 초자동화 워크플로우
+        </p>
+    </section>
+
+    <!-- Books Section -->
+    <section id="books" class="py-20 bg-applebg">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in-section">
+                <h2 class="text-4xl font-bold mb-4">최신 출판</h2>
+                <p class="text-lg text-gray-500">이미지를 클릭하시면 구매 페이지로 이동합니다.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <!-- Book 1 -->
+                <a href="https://search.shopping.naver.com/book/catalog/60677619152?fromwhere=people" target="_blank" class="group block fade-in-section">
+                    <div class="bg-white rounded-3xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 transform group-hover:-translate-y-2 h-full flex flex-col items-center text-center">
+                        <img src="에세이한권으로.jpg" alt="에세이 한 권으로 당신을 증명하라" class="w-48 h-auto object-contain rounded-md mb-6 shadow-md">
+                        <h3 class="text-xl font-bold mb-2 group-hover:text-appleblue transition">에세이 한 권으로 당신을 증명하라</h3>
+                        <p class="text-gray-500 text-sm">AI로 완성하는 퍼스널 브랜딩 출판 비결</p>
+                    </div>
+                </a>
+                <!-- Book 2 -->
+                <a href="https://search.shopping.naver.com/book/catalog/60278125307?fromwhere=people" target="_blank" class="group block fade-in-section" style="transition-delay: 100ms;">
+                    <div class="bg-white rounded-3xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 transform group-hover:-translate-y-2 h-full flex flex-col items-center text-center">
+                        <img src="AI행정학마스터.jpg" alt="AI 행정학 마스터" class="w-48 h-auto object-contain rounded-md mb-6 shadow-md">
+                        <h3 class="text-xl font-bold mb-2 group-hover:text-appleblue transition">AI 행정학 마스터</h3>
+                        <p class="text-gray-500 text-sm">바이브 코딩으로 완성하는 초자동화 워크플로우</p>
+                    </div>
+                </a>
+                <!-- Book 3 -->
+                <a href="https://search.shopping.naver.com/book/catalog/59831607302?fromwhere=people" target="_blank" class="group block fade-in-section" style="transition-delay: 200ms;">
+                    <div class="bg-white rounded-3xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 transform group-hover:-translate-y-2 h-full flex flex-col items-center text-center">
+                        <img src="무너지지 않는 마음.jpg" alt="무너지지 않는 마음" class="w-48 h-auto object-contain rounded-md mb-6 shadow-md">
+                        <h3 class="text-xl font-bold mb-2 group-hover:text-appleblue transition">무너지지 않는 마음</h3>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resume Section -->
+    <section id="resume" class="py-24 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
+            <!-- Education -->
+            <div class="fade-in-section">
+                <h2 class="text-3xl font-bold mb-8 border-b pb-4">학력</h2>
+                <ul class="space-y-6 text-lg text-gray-700">
+                    <li class="flex items-start">
+                        <span class="mr-3 text-appleblue">•</span>
+                        <span>백석대학교 기독교전문대학원 행정학 박사</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="mr-3 text-appleblue">•</span>
+                        <span>호서대학교 글로벌창업대학원 창업경영학과 석사</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="mr-3 text-appleblue">•</span>
+                        <span>횃불트리니티신학대학원대학교 목회학 석사</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="mr-3 text-appleblue">•</span>
+                        <span>홍익대학교 컴퓨터공학 학사</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="mr-3 text-appleblue">•</span>
+                        <span>사이버한국외국어대학교 한국어, 영어 학사</span>
+                    </li>
+                </ul>
+            </div>
+            
+            <!-- Experience -->
+            <div class="fade-in-section" style="transition-delay: 100ms;">
+                <h2 class="text-3xl font-bold mb-8 border-b pb-4">경력 및 자격</h2>
+                <ul class="space-y-6 text-lg text-gray-700">
+                    <li class="flex items-start">
+                        <span class="mr-3 text-appleblue">•</span>
+                        <span>대한예수교장로회총회 백석 경기노회 목사</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="mr-3 text-appleblue">•</span>
+                        <span>신한대학교 교목실 교목팀장</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="mr-3 text-appleblue">•</span>
+                        <span>신한대학교 리나시타교양대학 강사</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="mr-3 text-appleblue">•</span>
+                        <span>사회조사분석사 2급</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="mr-3 text-appleblue">•</span>
+                        <span>한국어 교원 2급, TESOL</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="mr-3 text-appleblue">•</span>
+                        <span>전 조이어스커뮤니티교회 목사</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Papers Section -->
+    <section id="papers" class="py-20 bg-applebg">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 fade-in-section">
+            <h2 class="text-3xl font-bold mb-10 text-center">논문</h2>
+            <div class="bg-white rounded-3xl p-8 sm:p-12 shadow-sm">
+                <ul class="space-y-8">
+                    <li class="border-b pb-6 last:border-0 last:pb-0">
+                        <div class="text-sm text-appleblue font-semibold mb-2">2025.12.</div>
+                        <h3 class="text-xl font-medium leading-relaxed">대학교육행정서비스의 질이 대학만족도에 미치는 영향 : 조직몰입과 자기효능감의 매개효과를 중심으로</h3>
+                    </li>
+                    <li class="border-b pb-6 last:border-0 last:pb-0">
+                        <div class="text-sm text-appleblue font-semibold mb-2">2025.10.</div>
+                        <h3 class="text-xl font-medium leading-relaxed">교육행정서비스의질 척도 개발과 대학만족도에 미치는 영향</h3>
+                    </li>
+                    <li class="border-b pb-6 last:border-0 last:pb-0">
+                        <div class="text-sm text-appleblue font-semibold mb-2">2024.02.</div>
+                        <h3 class="text-xl font-medium leading-relaxed">강의요인과 강사요인이 강의만족도 및 강의효과에 미치는 영향 : 교회출석의 조절효과 검증</h3>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Links Section -->
+    <section id="contact" class="py-24 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center fade-in-section">
+        <h2 class="text-3xl font-bold mb-12">연락처 및 링크</h2>
+        
+        <div class="flex flex-wrap justify-center gap-4 mb-12">
+            <a href="mailto:holyagape@naver.com" class="px-6 py-3 bg-gray-100 hover:bg-gray-200 rounded-full text-gray-800 font-medium transition flex items-center space-x-2">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                <span>이메일</span>
+            </a>
+            <a href="https://search.naver.com/search.naver?where=m&sm=mtb_etc&mra=bjky&pkid=1&os=28642191&qvt=0&query=%EA%B9%80%EC%A7%84%ED%98%B8" target="_blank" class="px-6 py-3 bg-[#03C75A] hover:bg-[#02b351] rounded-full text-white font-medium transition flex items-center space-x-2 shadow-sm">
+                <span>네이버 인물 검색</span>
+            </a>
+            <a href="https://www.youtube.com/@ws-admin" target="_blank" class="px-6 py-3 bg-[#FF0000] hover:bg-[#cc0000] rounded-full text-white font-medium transition flex items-center space-x-2 shadow-sm">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                <span>유튜브</span>
+            </a>
+            <a href="https://www.facebook.com/Kim.Jin.Ho.Jono" target="_blank" class="px-6 py-3 bg-[#1877F2] hover:bg-[#166fe5] rounded-full text-white font-medium transition flex items-center space-x-2 shadow-sm">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.469h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.469h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                <span>페이스북</span>
+            </a>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-3xl mx-auto">
+            <a href="https://blog.naver.com/holyagape" target="_blank" class="p-4 border rounded-2xl hover:border-[#03C75A] hover:text-[#03C75A] transition font-medium">블로그 (holyagape)</a>
+            <a href="https://blog.naver.com/aicrafter" target="_blank" class="p-4 border rounded-2xl hover:border-[#03C75A] hover:text-[#03C75A] transition font-medium">블로그 (aicrafter)</a>
+            <a href="https://blog.naver.com/ddanlife" target="_blank" class="p-4 border rounded-2xl hover:border-[#03C75A] hover:text-[#03C75A] transition font-medium">블로그 (ddanlife)</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-50 border-t border-gray-200 py-12">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm text-gray-500">
+            <p>&copy; 2026 김진호. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scroll Animation Script -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.fade-in-section').forEach(section => {
+                observer.observe(section);
+            });
+        });
+    </script>
+</body>
+</html>
